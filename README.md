@@ -1,6 +1,6 @@
 # DataStructuresCPP
 
-#### 👋 Bem-vindo ao meu repositório de Estrutura de Dados em C++! Aqui você encontrará implementações de diversas estruturas de dados comumente usadas, escritas em C++.
+#### 👋 Bem-vindo ao meu repositório de Estrutura de Dados! Aqui você encontrará implementações de diversas estruturas de dados comumente usadas, escritas em C++.
 
 # 📃 Descrição
 DataStructuresCPP é um repositório que oferece implementações eficientes de várias estruturas de dados comuns em C++. O objetivo principal é ajudar os desenvolvedores a melhorar a organização e o desempenho de seus programas, fornecendo uma biblioteca confiável de estruturas de dados.
@@ -43,10 +43,10 @@ cd nome-do-repositorio
 ### Passo 3: Compile e execute o programa
 Compile o código-fonte da estrutura de dados desejada. Por exemplo, para compilar e executar o código de uma lista ligada:
 ```
-g++ linked_list.cpp -o linked_list
-./linked_list
+g++ lista_sequencial.cpp -o lista_sequencial
+./lista_sequencial
 ```
-Certifique-se de substituir "linked_list.cpp" pelo nome do arquivo da estrutura de dados que deseja compilar e executar.
+Certifique-se de substituir "lista_sequencial.cpp" pelo nome do arquivo da estrutura de dados que deseja compilar e executar.
 
 ### Passo 4: 
 Explore o código-fonte, faça alterações e adaptações de acordo com suas necessidades. Sinta-se à vontade para adicionar novas funcionalidades ou otimizações.
