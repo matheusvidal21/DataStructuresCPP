@@ -8,21 +8,23 @@ DataStructuresCPP é um repositório que oferece implementações eficientes de 
 # 🌟 Estruturas de Dados Implementadas
 Neste repositório, você encontrará implementações das seguintes estruturas de dados:
 
-- Lista Sequencial (Linked List)
+- [Lista Sequencial (Array)](/Lista%20Sequencial): Uma lista implementada como um array, permitindo a inserção, remoção e acesso rápido aos elementos.
 
-- Lista Simplesmente Encadeada (Linked List)
+- [Lista Simplesmente Encadeada (Linked List)](/Lista%20Simplesmente%20Encadeada): Uma lista encadeada em que cada elemento possui um ponteiro para o próximo elemento, permitindo inserções e remoções eficientes.
 
-- Lista Duplamente Encadeada (Doubly Linked List)
+- [Lista Duplamente Encadeada (Doubly Linked List)](/Lista%20Duplamente%20Encadeada): Uma lista encadeada em que cada elemento possui um ponteiro tanto para o próximo quanto para o elemento anterior, permitindo navegação bidirecional e operações eficientes de inserção e remoção.
 
-- Pilha (Stack)
+- [Pilha (Stack)](/Pilha): Uma estrutura de dados baseada no princípio LIFO (Last-In, First-Out), em que o último elemento inserido é o primeiro a ser removido.
 
-- Fila (Queue)
+- [Fila (Queue)](/Fila):  Uma estrutura de dados baseada no princípio FIFO (First-In, First-Out), em que o primeiro elemento inserido é o primeiro a ser removido.
   
-- Deque (Double Ended Queue)
+- [Deque (Double Ended Queue)](/Deque): Uma fila de duas pontas que permite a inserção e remoção tanto no início quanto no final da estrutura, proporcionando flexibilidade nas operações.
   
-- Set 
+- [Set (Conjunto)](/Set): Uma coleção de elementos únicos, em que cada elemento pode ser adicionado ou removido do conjunto, e é possível verificar se um elemento está presente no conjunto.
 
-- Tabela Hash (Hash Table)
+- [Tabela Hash (Hash Table)](/Tabela%20Hash): Uma estrutura de dados que permite o armazenamento eficiente de pares de chave-valor, utilizando uma função hash para calcular o índice de armazenamento dos elementos. Isso possibilita o acesso rápido aos valores com base em suas chaves.
+
+Essas implementações oferecem soluções eficientes e flexíveis para o armazenamento e manipulação de dados em diferentes contextos.
 
 # 🔧 Como compilar
 
@@ -43,8 +45,8 @@ cd nome-do-repositorio
 ### Passo 3: Compile e execute o programa
 Compile o código-fonte da estrutura de dados desejada. Por exemplo, para compilar e executar o código de uma lista ligada:
 ```
-g++ lista_sequencial.cpp -o lista_sequencial
-./lista_sequencial
+g++ linkedList.cpp -o linkedList
+./linkedList
 ```
 Certifique-se de substituir "lista_sequencial.cpp" pelo nome do arquivo da estrutura de dados que deseja compilar e executar.
 
