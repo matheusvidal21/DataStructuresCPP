@@ -223,3 +223,51 @@ class ListaDuplamenteEncadeada{
     }
 
 };
+
+int main() {
+    ListaDuplamenteEncadeada<int> lista;
+
+    lista.pushFront(5);
+    lista.pushFront(4);
+    lista.pushFront(3);
+    lista.pushFront(2);
+    lista.pushFront(1);
+
+    std::cout << "Lista atual: ";
+    lista.print();
+    std::cout << "Tamanho atual: " << lista.getSize() << std::endl;
+
+    lista.pushBack(6);
+    lista.pushBack(7);
+    lista.pushBack(8);
+
+    std::cout << "Lista atual: ";
+    lista.print();
+    std::cout << "Tamanho atual: " << lista.getSize() << std::endl;
+
+    lista.removeValue(6);
+
+    std::cout << "Lista atual: ";
+    lista.print();
+    std::cout << "Tamanho atual: " << lista.getSize() << std::endl;
+
+    lista.removeFront();
+
+    std::cout << "Lista atual: ";
+    lista.print();
+    std::cout << "Tamanho atual: " << lista.getSize() << std::endl;
+
+    lista.removeBack();
+
+    std::cout << "Lista atual: ";
+    lista.print();
+    std::cout << "Tamanho atual: " << lista.getSize() << std::endl;
+
+    std::cout << "Valor no índice 2: " << lista.get(2) << std::endl;
+
+    lista.clear();
+    std::cout << "Lista atual: ";
+    lista.print();
+
+    return 0;
+}

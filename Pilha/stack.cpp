@@ -71,3 +71,26 @@ public:
     
 };
 
+int main() {
+    Pilha<int> pilha;
+
+    pilha.push(1);
+    pilha.push(2);
+    pilha.push(3);
+
+    std::cout << "Elemento do topo: " << pilha.peek() << std::endl;
+
+    pilha.pop();
+
+    std::cout << "Elemento do topo após remover: " << pilha.peek() << std::endl;
+
+    pilha.push(4);
+    pilha.push(5);
+
+    while (!pilha.isEmpty()) {
+      std::cout << "Elemento removido: " << pilha.peek() << std::endl;
+      pilha.pop();
+    }
+
+    return 0;
+}

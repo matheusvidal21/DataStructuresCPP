@@ -1,12 +1,12 @@
 #include <iostream>
 
-struct Node {
-  int value;
-  Node* next;
-};
-
 class LinkedList {
 private:
+  struct Node {
+    int value;
+    Node* next;
+  };
+
   Node* head;
 
 public:

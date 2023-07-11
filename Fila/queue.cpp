@@ -74,3 +74,27 @@ public:
         return head->valor;
     }
 };
+
+int main() {
+    Fila<int> fila;
+
+    fila.enqueue(1);
+    fila.enqueue(2);
+    fila.enqueue(3);
+
+    std::cout << "Elemento da frente: " << fila.peek() << std::endl;
+
+    fila.dequeue();
+
+    std::cout << "Elemento da frente após remover: " << fila.peek() << std::endl;
+
+    fila.enqueue(4);
+    fila.enqueue(5);
+
+    while (!fila.isEmpty()) {
+      std::cout << "Elemento removido: " << fila.peek() << std::endl;
+      fila.dequeue();
+    }
+
+    return 0;
+}
