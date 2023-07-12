@@ -5,21 +5,21 @@
 # Funcionalidades
 A implementação da lista sequencial possui as seguintes funcionalidades:
 
-1. `push_front()`: Permite adicionar um elemento no início da lista.
+1. `push_front(valor)`: Permite adicionar um elemento no início da lista.
 
-2. `push_back()`: Permite adicionar um elemento no final da lista.
+2. `push_back(valor)`: Permite adicionar um elemento no final da lista.
 
-3. `insert()`: Permite adicionar um elemento em uma posição determinada da lista.
+3. `insert(index, valor)`: Permite adicionar um elemento em uma posição determinada da lista.
 
 4. `pop_front()`: Remove o primeiro elemento da lista.
 
 5. `pop_back()`: Remove o último elemento da lista.
 
-6. `removeAt()`: Remove um elemento em uma posição determinada da lista.
+6. `removeAt(index)`: Remove um elemento em uma posição determinada da lista.
 
 7. `sizeOf()`: Retorna o tamanho atual da lista.
 
-8. `find()`: Procura por um elemento na lista e retorna o seu índice.
+8. `find(chave)`: Procura por um elemento na lista e retorna o seu índice.
 
 9. `Delete()`: Remove todos os elementos da lista.
 
@@ -30,49 +30,60 @@ A implementação da lista sequencial possui as seguintes funcionalidades:
 # Utilização
 A lista sequencial pode ser utilizada da seguinte forma:
 ### 1. Inicialize a lista com uma capacidade máxima:
-```
-Lista lista;
+```cpp
+Lista<int> lista;
 int max;
-cout << "Qual é a capacidade máxima da sua lista?" << endl;
-cin >> max;
+std::cout << "Qual é a capacidade máxima da sua lista?" << std::endl;
+std::cin >> max;
 lista.inicializaVetor(max);
 ```
 ### 2. Insira elementos na lista:
-```
-int elemento;
-cout << "Quantos elementos deseja inserir?" << endl;
-cin >> n;
+```cpp
+int n;
+std::cout << "Quantos elementos deseja inserir?" << std::endl;
+std::cin >> n;
 
 for (int i = 0; i < n; i++) {
   int elemento = 0;
-  cout << "Adicione o " << i+1 << "º elemento: ";
-  cin >> elemento;
+  std::cout << "Adicione o " << i+1 << "º elemento: ";
+  std::cin >> elemento;
   lista.push_back(elemento);
 }
 ```
 ### 3. Realize operações na lista conforme desejado:
-```
+```cpp
 int op;
 while (true) {
-  cout << "=======================================\n";
-  cout << "Informe qual operação deseja fazer: \n";
-  cin >> op;
-  cout << endl;
+  std::cout << "=======================================\n";
+  std::cout << "Informe qual operação deseja fazer: \n";
+  std::cin >> op;
+  std::cout << std::endl;
 
   if (op == -1) break;
 
   switch (op) {
-    case 1: 
-    ....
+    case 1:
+      // Operação push_front
+      // ...
+      break;
+    case 2:
+      // Operação push_back
+      // ...
+      break;
+    case 3:
+      // Operação insert
+      // ...
+      break;
+    // ... outras operações
   }
 
-  cout << "Pressione qualquer tecla para continuar...";
-  cin.ignore();
-  cin.get();
+  std::cout << "Pressione qualquer tecla para continuar...";
+  std::cin.ignore();
+  std::cin.get();
 
   system(CLEAR_COMMAND);
 
-  cout << endl << "Que operação deseja fazer?" << endl
+  std::cout << std::endl << "Que operação deseja fazer?" << std::endl
        << " 1. Inserir um valor na frente da lista\n"
        << " 2. Inserir um valor no final da lista\n"
        << " 3. Inserir um valor em uma determinada posição da lista\n"
@@ -89,8 +100,8 @@ while (true) {
 ```
 
 # Observações
-- A implementação da lista sequencial neste exemplo utiliza int como tipo de dado. Você pode modificar o tipo de dado da lista sequencial de acordo com as suas necessidades, alterando a declaração da estrutura Lista e adaptando as operações de acordo.
-
+- A implementação da lista sequencial neste exemplo utiliza o tipo int. Você pode modificar o tipo de dado da lista sequencial de acordo com as suas necessidades, alterando a declaração da estrutura Lista e adaptando as operações de acordo.
+  
 - Este exemplo é uma implementação básica da lista sequencial. Para aplicações mais complexas ou que exigem um desempenho melhor, pode ser necessário realizar otimizações adicionais ou utilizar outras estruturas de dados mais adequadas.
 
-- Certifique-se de gerenciar corretamente a memória alocada ao utilizar a lista sequencial. Utilize a função Delete() para liberar a memória alocada pela lista quando não for mais necessária.
+- CCertifique-se de gerenciar corretamente a memória alocada ao utilizar a lista sequencial. Utilize a função Delete() para liberar a memória alocada pela lista quando não for mais necessária.
