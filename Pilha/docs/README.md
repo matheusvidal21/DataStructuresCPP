@@ -5,9 +5,9 @@
 # Funcionalidades
 A implementação da pilha possui as seguintes funcionalidades:
 
-1. `isEmpty()`: Verifica se a fila está vazia.
+1. `isEmpty()`: Verifica se a pilha está vazia.
 
-2. `push()`: Adiciona um elemento no topo da pilha.
+2. `push(value)`: Adiciona um elemento no topo da pilha.
 
 3. `pop()`: Remove o elemento do topo da pilha.
 
@@ -24,7 +24,6 @@ Substitua T pelo tipo de dado que deseja armazenar na pilha.
 
 
 ### 2. Realize as operações desejadas na fila, como inserção e remoção:
-
 ```
 pilha.isEmpty();
 pilha.push(value);
@@ -34,7 +33,54 @@ pilha.peek();
 ```
 Substitua value pelo valor a ser inserido.      
 
-#### 3. Utilize as funções isEmpty() para verificar se a pilha está vazia, push(value) para adicionar um elemento no topo da pilha, pop() para remover o elemento do topo da pilha e peek() para acessar o elemento do topo da pilha sem removê-lo.
+Utilize as funções isEmpty() para verificar se a pilha está vazia, push(value) para adicionar um elemento no topo da pilha, pop() para remover o elemento do topo da pilha e peek() para acessar o elemento do topo da pilha sem removê-lo.
+
+# Exemplo de utilização
+```
+#include <iostream>
+
+/**
+ * Classe que implementa uma pilha utilizando a estrutura de lista encadeada.
+ */
+template <typename T>
+class Pilha{
+    // Código da classe Pilha
+};
+
+int main() {
+    Pilha<int> pilha;
+
+    pilha.push(1);
+    pilha.push(2);
+    pilha.push(3);
+
+    std::cout << "Elemento do topo: " << pilha.peek() << std::endl;
+
+    pilha.pop();
+
+    std::cout << "Elemento do topo após remover: " << pilha.peek() << std::endl;
+
+    pilha.push(4);
+    pilha.push(5);
+
+    while (!pilha.isEmpty()) {
+        std::cout << "Elemento removido: " << pilha.peek() << std::endl;
+        pilha.pop();
+    }
+
+    return 0;
+}
+```
+
+# Saída do exemplo
+```
+Elemento do topo: 3
+Elemento do topo após remover: 2
+Elemento removido: 5
+Elemento removido: 4
+Elemento removido: 2
+Elemento removido: 1
+```
 
 # Observações
 - Esta implementação da pilha é genérica, o que significa que pode ser utilizada para armazenar valores de qualquer tipo de dado.
