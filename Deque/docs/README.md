@@ -1,6 +1,6 @@
 # Deque (Double-ended Queue)
 
-#### Um deque, também conhecido como Double-ended Queue, é uma estrutura de dados que permite a inserção e remoção de elementos tanto no início quanto no final da fila. Nesta implementação, o deque é baseado em uma lista encadeada duplamente, em que cada elemento é representado por um nó contendo referências para o nó anterior e próximo. [Clique aqui](../deque.cpp) para ver a implementação da pilha.
+#### Um deque, também conhecido como Double-ended Queue, é uma estrutura de dados que permite a inserção e remoção de elementos tanto no início quanto no final da fila. Nesta implementação, o deque é baseado em uma lista encadeada duplamente, em que cada elemento é representado por um nó contendo referências para o nó anterior e próximo. [Clique aqui](../deque.cpp) para ver a implementação do deque.
 
 # Funcionalidades
 A implementação do deque possui as seguintes funcionalidades:
