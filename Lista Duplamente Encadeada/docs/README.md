@@ -6,17 +6,17 @@
 # Funcionalidades
 A implementação da lista duplamente encadeada possui as seguintes funcionalidades:
 
-1. `get()`: Retorna o valor de um elemento em um índice específico da lista.
+1. `get(index)`: Retorna o valor de um elemento em um índice específico da lista.
 
-2. `pushFront()`: Adiciona um elemento no início da lista.
+2. `pushFront(value)`: Adiciona um elemento no início da lista.
 
-3. `pushBack()`: Adiciona um elemento no final da lista.
+3. `pushBack(value)`: Adiciona um elemento no final da lista.
 
 4. `removeFront()`: Remove o primeiro elemento da lista.
 
 5. `removeBack()`: Remove o último elemento da lista.
 
-6. `removeValue()`: Remove um elemento específico da lista.
+6. `removeValue(value)`: Remove um elemento específico da lista.
 
 7. `getSize()`: Retorna o tamanho atual da lista.
 
@@ -52,6 +52,76 @@ Substitua value pelo valor a ser inserido ou removido e index pelo índice do el
 #### 3. Utilize as funções print() para exibir os elementos da lista, getSize() para obter o tamanho atual da lista e isEmpty() para verificar se a lista está vazia.
 ```cpp
 lista.print();
+```
+
+# Exemplo de utilização
+```cpp
+#include <iostream>
+#include "DoubleLinkedList.h"
+
+int main() {
+    ListaDuplamenteEncadeada<int> lista;
+
+    lista.pushFront(5);
+    lista.pushFront(4);
+    lista.pushFront(3);
+    lista.pushFront(2);
+    lista.pushFront(1);
+
+    std::cout << "Lista atual: ";
+    lista.print();
+    std::cout << "Tamanho atual: " << lista.getSize() << std::endl;
+
+    lista.pushBack(6);
+    lista.pushBack(7);
+    lista.pushBack(8);
+
+    std::cout << "Lista atual: ";
+    lista.print();
+    std::cout << "Tamanho atual: " << lista.getSize() << std::endl;
+
+    lista.removeValue(6);
+
+    std::cout << "Lista atual: ";
+    lista.print();
+    std::cout << "Tamanho atual: " << lista.getSize() << std::endl;
+
+    lista.removeFront();
+
+    std::cout << "Lista atual: ";
+    lista.print();
+    std::cout << "Tamanho atual: " << lista.getSize() << std::endl;
+
+    lista.removeBack();
+
+    std::cout << "Lista atual: ";
+    lista.print();
+    std::cout << "Tamanho atual: " << lista.getSize() << std::endl;
+
+    std::cout << "Valor no índice 2: " << lista.get(2) << std::endl;
+
+    lista.clear();
+    std::cout << "Lista atual: ";
+    lista.print();
+
+    return 0;
+}
+```
+
+# Saída do exemplo
+```
+Lista atual: 1 2 3 4 5
+Tamanho atual: 5
+Lista atual: 1 2 3 4 5 6 7 8
+Tamanho atual: 8
+Lista atual: 1 2 3 4 5 7 8
+Tamanho atual: 7
+Lista atual: 2 3 4 5 7 8
+Tamanho atual: 6
+Lista atual: 2 3 4 5 7
+Tamanho atual: 5
+Valor no índice 2: 4
+Lista atual: A lista está vazia.
 ```
 
 # Observações
