@@ -7,11 +7,11 @@ A implementação do conjunto possui as seguintes funcionalidades:
 
 1. `isEmpty()`: Verifica se o conjunto está vazio.
 
-2. `contains()`: Verifica se o conjunto contém o valor especificado.
+2. `contains(value)`: Verifica se o conjunto contém o valor especificado.
 
-3. `insert()`: Insere um valor único no conjunto.
+3. `insert(value)`: Insere um valor único no conjunto.
 
-4. `remove()`: Remove um valor do conjunto, se presente.
+4. `remove(value)`: Remove um valor do conjunto, se presente.
 
 5. `clear()`: Remove todos os elementos do conjunto.
 
@@ -38,8 +38,8 @@ set.print();
 
 ```
 Substitua value pelo valor a ser inserido, removido ou verificado.
-- Utilize as funções isEmpty() para verificar se o conjunto está vazio, contains(value) para verificar se um elemento está presente no conjunto, insert(value) para adicionar um elemento ao conjunto, remove(value) para remover um elemento do conjunto, clear() para remover todos os elementos do conjunto e print() para imprimir os elementos do conjunto.
 
+Utilize as funções isEmpty() para verificar se o conjunto está vazio, contains(value) para verificar se um elemento está presente no conjunto, insert(value) para adicionar um elemento ao conjunto, remove(value) para remover um elemento do conjunto, clear() para remover todos os elementos do conjunto e print() para imprimir os elementos do conjunto.
 
 # Exemplo de uso
 ```
