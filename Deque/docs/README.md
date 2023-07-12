@@ -28,15 +28,14 @@ A implementação do deque possui as seguintes funcionalidades:
 O deque pode ser utilizado da seguinte forma:
 
 ### 1. Crie uma instância do deque:
-```
+```cpp
 Deque<T> deque;
 ```
 Substitua T pelo tipo de dado que deseja armazenar no deque.
 
 
 ### 2. Realize as operações desejadas no deque, como inserção e remoção:
-
-```
+```cpp
 deque.isEmpty();
 deque.pushFront(value);
 deque.pushBack(value);
@@ -46,14 +45,13 @@ deque.getFront();
 deque.getBack();
 deque.clear();
 deque.print();
-
 ```
 Substitua value pelo valor a ser inserido ou removido.
 
 Utilize as funções isEmpty() para verificar se o deque está vazio, pushFront(value) para adicionar um elemento no início do deque, pushBack(value) para adicionar um elemento no final do deque, popFront() para remover o elemento do início do deque, popBack() para remover o elemento do final do deque, getFront() para acessar o elemento do início do deque sem removê-lo, getBack() para acessar o elemento do final do deque sem removê-lo, clear() para remover todos os elementos do deque e print() para imprimir os elementos do deque.
 
 # Exemplo de utilização
-```
+```cpp
 #include <iostream>
 
 template <typename T>
