@@ -24,15 +24,14 @@ A implementação da tabela hash possui as seguintes funcionalidades:
 A tabela hash pode ser utilizada da seguinte forma:
 
 ### 1. Crie uma instância da tabela hash:
-```
+```cpp
 HashTable<KeyType, ValueType> hashTable;
 ```
 Substitua KeyType pelo tipo de dado da chave e ValueType pelo tipo de dado do valor.
 
 
 ### 2. Realize as operações desejadas na tabela hash, como inserção, remoção, obtenção de valor associado a uma chave:
-
-```
+```cpp
 hashTable.isEmpty();
 hashTable.getSize();
 hashTable.insert(key, value);
@@ -46,7 +45,7 @@ Substitua key pela chave a ser inserida, removida, verificada ou obtida, e value
 Utilize as funções isEmpty() para verificar se a tabela hash está vazia, getSize() para obter o tamanho da tabela hash, insert(key, value) para adicionar um par chave-valor na tabela hash, remove(key) para remover um par chave-valor da tabela hash a partir da chave, contains(key) para verificar a existência de uma chave na tabela hash, get(key) para obter o valor associado a uma chave na tabela hash e clear() para remover todos os elementos da tabela hash.
 
 # Exemplo de utilização
-```
+```cpp
 #include <iostream>
 #include <vector>
 #include <list>
