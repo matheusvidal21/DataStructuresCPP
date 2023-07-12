@@ -1,9 +1,10 @@
 #include <iostream>
 
+template <typename T>
 class LinkedList {
 private:
   struct Node {
-    int value;
+    T value;
     Node* next;
   };
 
@@ -35,7 +36,7 @@ public:
     return count;
   }
 
-  void push_back(int x) {
+  void push_back(const T& x) {
     Node* newNode = new Node{ x, nullptr };
 
     if (head == nullptr) {
@@ -51,7 +52,7 @@ public:
     }
   }
 
-  void push_front(int x) {
+  void push_front(const T& x) {
     Node* newNode = new Node{ x, nullptr };
 
     if (head == nullptr) {
@@ -99,7 +100,7 @@ public:
     std::cout << "Último elemento excluído." << std::endl;
   }
 
-  void excluir(int x) {
+  void excluir(const T& x) {
     if (head == nullptr) {
       std::cout << "Lista vazia" << std::endl;
       return;
@@ -129,7 +130,7 @@ public:
     std::cout << "O elemento " << x << " foi excluído da lista" << std::endl;
   }
 
-  bool find(int x) const {
+  bool find(const T& x) const {
     Node* current = head;
     while (current != nullptr) {
       if (current->value == x) {
@@ -155,7 +156,7 @@ public:
 };
 
 int main() {
-  LinkedList lista;
+  LinkedList<int> lista;
 
   lista.push_front(5);
   lista.push_front(4);
