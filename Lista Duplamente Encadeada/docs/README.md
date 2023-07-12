@@ -30,12 +30,12 @@ A implementação da lista duplamente encadeada possui as seguintes funcionalida
 # Utilização
 A lista duplamente encadeada pode ser utilizada da seguinte forma:
 ### 1. Crie uma instância da lista:
-```
+```cpp
 ListaDuplamenteEncadeada<T> lista;
 ```
 Substitua T pelo tipo de dado que deseja armazenar na lista.
 ### 2. Realize as operações desejadas na lista, como inserção, remoção, busca e limpeza:
-```
+```cpp
 lista.pushFront(value);
 lista.pushBack(value);
 lista.removeFront();
@@ -48,8 +48,9 @@ lista.getSize();
 lista.clear();
 ```
 Substitua value pelo valor a ser inserido ou removido e index pelo índice do elemento que deseja acessar
+
 #### 3. Utilize as funções print() para exibir os elementos da lista, getSize() para obter o tamanho atual da lista e isEmpty() para verificar se a lista está vazia.
-```
+```cpp
 lista.print();
 ```
 
