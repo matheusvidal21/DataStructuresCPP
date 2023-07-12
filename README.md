@@ -54,7 +54,7 @@ Certifique-se de substituir "lista_sequencial.cpp" pelo nome do arquivo da estru
 Explore o código-fonte, faça alterações e adaptações de acordo com suas necessidades. Sinta-se à vontade para adicionar novas funcionalidades ou otimizações.
 
 # 🎉 Contribuição
-Contribuições para este repositório são sempre bem-vindas! Se você deseja adicionar uma nova estrutura de dados, corrigir algum bug ou melhorar a implementação existente, sinta-se à vontade para abrir uma pull request. Certifique-se de seguir as diretrizes de contribuição estabelecidas.
+Contribuições para este repositório são sempre bem-vindas! Se você deseja adicionar uma nova estrutura de dados, corrigir algum bug ou melhorar a implementação existente, sinta-se à vontade para abrir uma pull request.
 
 
 
