@@ -27,13 +27,13 @@ A implementação da lista simplesmente encadeada possui as seguintes funcionali
 # Utilização
 A lista simplesmente encadeada pode ser utilizada da seguinte forma:
 ### 1. Crie uma instância da lista especificando o tipo dos elementos:
-```
+```cpp
 LinkedList<int> lista; // Lista de inteiros
 LinkedList<std::string> lista; // Lista de strings
 LinkedList<double> lista; // Lista de números de ponto flutuante
 ```
 ### 2. Realize as operações desejadas na lista, como inserção, remoção, busca e limpeza:
-```
+```cpp
 lista.push_front(5);
 lista.push_back(6);
 lista.push_back(8);
@@ -43,13 +43,13 @@ lista.find(8);
 lista.clear();
 ```
 ### 3. Utilize a função print() para exibir os elementos da lista e sizeOf() para obter o tamanho atual da lista.
-```
+```cpp
 lista.print();
 std::cout << "Tamanho atual: " << lista.sizeOf() << std::endl;
 ```
 
 # Exemplo de utilização
-```
+```cpp
 #include <iostream>
 #include "LinkedList.h"
 
