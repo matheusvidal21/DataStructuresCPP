@@ -1,4 +1,4 @@
-# DataStructuresCPP
+# Estrutura de Dados
 
 #### 👋 Bem-vindo ao meu repositório de Estrutura de Dados! Aqui você encontrará implementações de diversas estruturas de dados comumente usadas, escritas em C++.
 
