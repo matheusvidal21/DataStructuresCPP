@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+#include <cstdlib>
 
 #ifdef _WIN32
 #define CLEAR_COMMAND "cls"
@@ -7,20 +7,21 @@ using namespace std;
 #define CLEAR_COMMAND "clear"
 #endif
 
+template<typename T>
 struct Lista {
-  int *vetor;
+  T *vetor;
   int tamanho;
   int capacidade;
 
   void inicializaVetor(int x) {
     tamanho = 0;
     capacidade = x;
-    vetor = new int[x];
+    vetor = new T[x];
   }
 
-  int push_front(int valor) {
+  int push_front(const T& valor) {
     if (tamanho == capacidade) {
-      cout << "Tamanho máximo já atingido\n";
+      std::cout << "Tamanho máximo já atingido\n";
       return -1;
     } 
     for (int i = tamanho; i > 0; i--) {
@@ -31,9 +32,9 @@ struct Lista {
     return 1;
   }
 
-  int push_back(int valor) {
+  int push_back(const T& valor) {
     if (tamanho == capacidade) {
-      cout << "Tamanho máximo já atingido\n";
+      std::cout << "Tamanho máximo já atingido\n";
       return -1;
     } 
     vetor[tamanho] = valor;
@@ -41,9 +42,9 @@ struct Lista {
     return 1;
   }
 
-  int insert(int index, int valor) {
+  int insert(int index, const T& valor) {
     if (tamanho == capacidade) {
-      cout << "Tamanho máximo já atingido\n";
+      std::cout << "Tamanho máximo já atingido\n";
       return -1;
     } 
     for (int i = tamanho; i > index; i--) {
@@ -82,14 +83,14 @@ struct Lista {
     return tamanho;
   }
 
-  int find(int chave) {
+  int find(const T& chave) {
     for (int i = 0; i < tamanho; i++) {
       if (chave == vetor[i]) {
-        cout << "O valor está na posição " << i << endl;
+        std::cout << "O valor está na posição " << i << std::endl;
         return i;
       }
     }
-    cout << "Esse valor não está na lista" << endl;
+    std::cout << "Esse valor não está na lista" << std::endl;
     return -1;
   }
 
@@ -103,7 +104,7 @@ struct Lista {
     for (int i = 0; i < tamanho - 1; i++) {
       for (int j = 0; j < tamanho - i - 1; j++) {
         if (vetor[j] > vetor[j+1]) {
-          int temp = vetor[j];
+          T temp = vetor[j];
           vetor[j] = vetor[j+1];
           vetor[j+1] = temp;
         }
@@ -113,7 +114,7 @@ struct Lista {
 
   void reverse() {
     for (int i = 0; i < tamanho / 2; i++) {
-      int temp = vetor[i];
+      T temp = vetor[i];
       vetor[i] = vetor[tamanho - i - 1];
       vetor[tamanho - i - 1] = temp;
     }
@@ -121,34 +122,34 @@ struct Lista {
 
   void imprime() {
     for (int i = 0; i < tamanho; i++) {
-      cout << vetor[i] << " ";
+      std::cout << vetor[i] << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
   }
 };
 
 int main() {
-  Lista vetor;
+  Lista<int> vetor;
   int n, max, op, pos = 1;
-  cout << "Qual é a capacidade máxima da sua lista?" << endl;
-  cin >> max;
-  cout << "Quantos elementos deseja inserir?" << endl;
-  cin >> n;
+  std::cout << "Qual é a capacidade máxima da sua lista?" << std::endl;
+  std::cin >> max;
+  std::cout << "Quantos elementos deseja inserir?" << std::endl;
+  std::cin >> n;
 
   vetor.inicializaVetor(max);
 
   for (int i = 0; i < n; i++) {
     int elemento = 0;
-    cout << "Adicione o " << pos << "º elemento: ";
-    cin >> elemento;
+    std::cout << "Adicione o " << pos << "º elemento: ";
+    std::cin >> elemento;
     vetor.push_back(elemento);
     pos++;
   }
 
-  cout << endl << "Essa é sua lista:" << endl;
+  std::cout << std::endl << "Essa é sua lista:" << std::endl;
   vetor.imprime();
 
-  cout << endl << "Que operação deseja fazer?" << endl
+  std::cout << std::endl << "Que operação deseja fazer?" << std::endl
        << " 1. Inserir um valor na frente da lista\n"
        << " 2. Inserir um valor no final da lista\n"
        << " 3. Inserir um valor em uma determinada posição da lista\n"
@@ -163,10 +164,10 @@ int main() {
        << "-1. Sair do programa\n";
 
   while (true) {
-    cout << "=======================================\n";
-    cout << "Informe qual operação deseja fazer: \n";
-    cin >> op;
-    cout << endl;
+    std::cout << "=======================================\n";
+    std::cout << "Informe qual operação deseja fazer: \n";
+    std::cin >> op;
+    std::cout << std::endl;
 
     if (op == -1) break;
 
@@ -175,8 +176,8 @@ int main() {
     switch (op) {
       case 1: {
         int valor; 
-        cout << "Qual valor deseja inserir na frente da lista? "; 
-        cin >> valor; 
+        std::cout << "Qual valor deseja inserir na frente da lista? "; 
+        std::cin >> valor; 
         vetor.push_front(valor); 
         vetor.imprime();
         break;
@@ -184,8 +185,8 @@ int main() {
       
       case 2: {
         int valor; 
-        cout << "Qual valor deseja inserir no fim da lista? "; 
-        cin >> valor; 
+        std::cout << "Qual valor deseja inserir no fim da lista? "; 
+        std::cin >> valor; 
         vetor.push_back(valor); 
         vetor.imprime();
         break;
@@ -193,24 +194,24 @@ int main() {
    
       case 3: {
         int valor, index; 
-        cout << "Em qual posição você quer inserir um valor? "; 
-        cin >> index; 
-        cout << "Qual valor deseja inserir na posição " << index << " da lista? "; 
-        cin >> valor; 
+        std::cout << "Em qual posição você quer inserir um valor? "; 
+        std::cin >> index; 
+        std::cout << "Qual valor deseja inserir na posição " << index << " da lista? "; 
+        std::cin >> valor; 
         vetor.insert(index, valor); 
         vetor.imprime();
         break;
       }
 
       case 4: {
-        cout << "Lista com o primeiro valor excluído: "; 
+        std::cout << "Lista com o primeiro valor excluído: "; 
         vetor.pop_front(); 
         vetor.imprime();
         break;
       }
 
       case 5: {
-        cout << "Lista com o último valor excluído: "; 
+        std::cout << "Lista com o último valor excluído: "; 
         vetor.pop_back(); 
         vetor.imprime();
         break;
@@ -218,56 +219,56 @@ int main() {
       
       case 6: {
         int index; 
-        cout << "Em qual posição você quer excluir um valor? ";  
-        cin >> index;
-        cout << "Lista com o valor da posição " << index << " excluído: " << endl; 
+        std::cout << "Em qual posição você quer excluir um valor? ";  
+        std::cin >> index;
+        std::cout << "Lista com o valor da posição " << index << " excluído: " << std::endl; 
         vetor.removeAt(index); 
         vetor.imprime();
         break;
       }
       
       case 7: {
-        cout << "O tamanho da lista é " << vetor.sizeOf() << endl; 
+        std::cout << "O tamanho da lista é " << vetor.sizeOf() << std::endl; 
         break;
       }
       
       case 8: {
         int valor; 
-        cout << "Qual elemento deseja procurar na lista? ";  
-        cin >> valor;
+        std::cout << "Qual elemento deseja procurar na lista? ";  
+        std::cin >> valor;
         vetor.find(valor); 
         break;
       }
       
       case 9: {
-        cout << "Todos os elementos foram removidos" << endl;
+        std::cout << "Todos os elementos foram removidos" << std::endl;
         vetor.Delete();
         vetor.imprime();
         break;
       }
       
       case 10: {
-        cout << "Lista ordenada de forma crescente:" << endl;
+        std::cout << "Lista ordenada de forma crescente:" << std::endl;
         vetor.sort();
         vetor.imprime();
         break;
       }
       
       case 11: {
-        cout << "Lista ordenada de forma decrescente:" << endl;
+        std::cout << "Lista ordenada de forma decrescente:" << std::endl;
         vetor.reverse();
         vetor.imprime();
         break;
       }
     }
 
-    cout << "Pressione qualquer tecla para continuar...";
-    cin.ignore();
-    cin.get();
+    std::cout << "Pressione qualquer tecla para continuar...";
+    std::cin.ignore();
+    std::cin.get();
 
     system(CLEAR_COMMAND);
 
-    cout << endl << "Que operação deseja fazer?" << endl
+    std::cout << std::endl << "Que operação deseja fazer?" << std::endl
          << " 1. Inserir um valor na frente da lista\n"
          << " 2. Inserir um valor no final da lista\n"
          << " 3. Inserir um valor em uma determinada posição da lista\n"
@@ -282,7 +283,7 @@ int main() {
          << "-1. Sair do programa\n";
   }
 
-  cout << "Programa finalizado." << endl;
+  std::cout << "Programa finalizado." << std::endl;
 
   return 0;
 }
