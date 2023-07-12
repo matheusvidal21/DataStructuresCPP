@@ -21,14 +21,13 @@ A implementação do conjunto possui as seguintes funcionalidades:
 # Utilização
 O conjunto pode ser utilizado da seguinte forma:
 ### 1. Crie uma instância do conjunto:
-```
+```cpp
 Set<T> set;
 ```
 Substitua T pelo tipo de dado que deseja armazenar no conjunto.
 
 ### 2. Realize as operações desejadas no conjunto, como inserção e remoção:
-
-```
+```cpp
 set.isEmpty();
 set.contains(value);
 set.insert(value);
@@ -42,7 +41,7 @@ Substitua value pelo valor a ser inserido, removido ou verificado.
 Utilize as funções isEmpty() para verificar se o conjunto está vazio, contains(value) para verificar se um elemento está presente no conjunto, insert(value) para adicionar um elemento ao conjunto, remove(value) para remover um elemento do conjunto, clear() para remover todos os elementos do conjunto e print() para imprimir os elementos do conjunto.
 
 # Exemplo de uso
-```
+```cpp
 #include <iostream>
 
 int main() {
