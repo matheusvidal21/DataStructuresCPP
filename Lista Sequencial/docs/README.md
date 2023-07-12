@@ -52,52 +52,141 @@ for (int i = 0; i < n; i++) {
 ```
 ### 3. Realize operações na lista conforme desejado:
 ```cpp
-int op;
-while (true) {
-  std::cout << "=======================================\n";
-  std::cout << "Informe qual operação deseja fazer: \n";
-  std::cin >> op;
-  std::cout << std::endl;
+lista.push_back(valor);
+lista.push_front(valor);
+lista.insert(index, valor);
+lista.removeAt(index); 
+```
+# Exemplo de utilização
+```cpp
+#include <iostream>
+#include "lista_sequencial.h"
 
-  if (op == -1) break;
+int main() {
+    Lista<int> lista;
+    int max, n, op, pos = 1;
 
-  switch (op) {
-    case 1:
-      // Operação push_front
-      // ...
-      break;
-    case 2:
-      // Operação push_back
-      // ...
-      break;
-    case 3:
-      // Operação insert
-      // ...
-      break;
-    // ... outras operações
-  }
+    std::cout << "Qual é a capacidade máxima da sua lista?" << std::endl;
+    std::cin >> max;
 
-  std::cout << "Pressione qualquer tecla para continuar...";
-  std::cin.ignore();
-  std::cin.get();
+    lista.inicializaVetor(max);
 
-  system(CLEAR_COMMAND);
+    std::cout << "Quantos elementos deseja inserir?" << std::endl;
+    std::cin >> n;
 
-  std::cout << std::endl << "Que operação deseja fazer?" << std::endl
-       << " 1. Inserir um valor na frente da lista\n"
-       << " 2. Inserir um valor no final da lista\n"
-       << " 3. Inserir um valor em uma determinada posição da lista\n"
-       << " 4. Excluir o primeiro valor da lista\n"
-       << " 5. Excluir o último valor da lista\n"
-       << " 6. Remover um determinado elemento\n"
-       << " 7. Retornar o tamanho atual da lista\n"
-       << " 8. Buscar um elemento na lista e retornar o índice\n"
-       << " 9. Remover todos os elementos da lista\n"
-       << "10. Ordenar a lista de forma crescente\n"
-       << "11. Ordenar a lista de forma decrescente\n"
-       << "-1. Sair do programa\n";
+    for (int i = 0; i < n; i++) {
+        int elemento = 0;
+        std::cout << "Adicione o " << pos << "º elemento: ";
+        std::cin >> elemento;
+        lista.push_back(elemento);
+        pos++;
+    }
+
+    std::cout << std::endl << "Essa é sua lista:" << std::endl;
+    lista.imprime();
+
+    std::cout << std::endl << "Que operação deseja fazer?" << std::endl
+              << " 1. Inserir um valor na frente da lista\n"
+              << " 2. Inserir um valor no final da lista\n"
+              << " 3. Inserir um valor em uma determinada posição da lista\n"
+              << " 4. Excluir o primeiro valor da lista\n"
+              << " 5. Excluir o último valor da lista\n"
+              << " 6. Remover um determinado elemento\n"
+              << " 7. Retornar o tamanho atual da lista\n"
+              << " 8. Buscar um elemento na lista e retornar o índice\n"
+              << " 9. Remover todos os elementos da lista\n"
+              << "10. Ordenar a lista de forma crescente\n"
+              << "11. Ordenar a lista de forma decrescente\n"
+              << "-1. Sair do programa\n";
+
+    while (true) {
+        std::cout << "=======================================\n";
+        std::cout << "Informe qual operação deseja fazer: \n";
+        std::cin >> op;
+        std::cout << std::endl;
+
+        if (op == -1)
+            break;
+
+        system("clear");
+
+        switch (op) {
+            case 1: {
+                int valor;
+                std::cout << "Qual valor deseja inserir na frente da lista? ";
+                std::cin >> valor;
+                lista.push_front(valor);
+                lista.imprime();
+                break;
+            }
+
+            case 2:
+            ....
+        }
+
+        std::cout << "Pressione qualquer tecla para continuar...";
+        std::cin.ignore();
+        std::cin.get();
+
+        system("clear");
+
+        std::cout << std::endl << "Que operação deseja fazer?" << std::endl
+                  << " 1. Inserir um valor na frente da lista\n"
+                  << " 2. Inserir um valor no final da lista\n"
+                  << " 3. Inserir um valor em uma determinada posição da lista\n"
+                  << " 4. Excluir o primeiro valor da lista\n"
+                  << " 5. Excluir o último valor da lista\n"
+                  << " 6. Remover um determinado elemento\n"
+                  << " 7. Retornar o tamanho atual da lista\n"
+                  << " 8. Buscar um elemento na lista e retornar o índice\n"
+                  << " 9. Remover todos os elementos da lista\n"
+                  << "10. Ordenar a lista de forma crescente\n"
+                  << "11. Ordenar a lista de forma decrescente\n"
+                  << "-1. Sair do programa\n";
+    }
+
+    std::cout << "Programa finalizado." << std::endl;
+
+    return 0;
 }
 ```
+
+# Saída do exemplo
+```
+Qual é a capacidade máxima da sua lista?
+5
+Quantos elementos deseja inserir?
+4
+Adicione o 1º elemento: 10
+Adicione o 2º elemento: 20
+Adicione o 3º elemento: 30
+Adicione o 4º elemento: 40
+
+Essa é sua lista:
+10 20 30 40 
+
+Que operação deseja fazer?
+ 1. Inserir um valor na frente da lista
+ 2. Inserir um valor no final da lista
+ 3. Inserir um valor em uma determinada posição da lista
+ 4. Excluir o primeiro valor da lista
+ 5. Excluir o último valor da lista
+ 6. Remover um determinado elemento
+ 7. Retornar o tamanho atual da lista
+ 8. Buscar um elemento na lista e retornar o índice
+ 9. Remover todos os elementos da lista
+10. Ordenar a lista de forma crescente
+11. Ordenar a lista de forma decrescente
+-1. Sair do programa
+=======================================
+Informe qual operação deseja fazer: 
+2
+
+Qual valor deseja inserir no fim da lista? 50
+10 20 30 40 50 
+Pressione qualquer tecla para continuar...
+```
+Esse exemplo permite que você execute diversas operações na lista sequencial, como inserir elementos no início ou final, inserir em uma posição específica, remover elementos, buscar elementos, ordenar a lista e muito mais. Você pode testar diferentes operações e observar os resultados.
 
 # Observações
 - A implementação da lista sequencial neste exemplo utiliza o tipo int. Você pode modificar o tipo de dado da lista sequencial de acordo com as suas necessidades, alterando a declaração da estrutura Lista e adaptando as operações de acordo.
