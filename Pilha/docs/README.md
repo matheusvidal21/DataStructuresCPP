@@ -17,14 +17,13 @@ A implementação da pilha possui as seguintes funcionalidades:
 # Utilização
 A pilha pode ser utilizada da seguinte forma:
 ### 1. Crie uma instância da fila:
-```
+```cpp
 Pilha<T> pilha;
 ```
 Substitua T pelo tipo de dado que deseja armazenar na pilha.
 
-
 ### 2. Realize as operações desejadas na fila, como inserção e remoção:
-```
+```cpp
 pilha.isEmpty();
 pilha.push(value);
 pilha.pop();
@@ -36,7 +35,7 @@ Substitua value pelo valor a ser inserido.
 Utilize as funções isEmpty() para verificar se a pilha está vazia, push(value) para adicionar um elemento no topo da pilha, pop() para remover o elemento do topo da pilha e peek() para acessar o elemento do topo da pilha sem removê-lo.
 
 # Exemplo de utilização
-```
+```cpp
 #include <iostream>
 
 /**
