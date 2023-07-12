@@ -17,14 +17,13 @@ A implementação da fila possui as seguintes funcionalidades:
 # Utilização
 A fila pode ser utilizada da seguinte forma:
 ### 1. Crie uma instância da fila:
-```
+```cpp
 Fila<T> fila;
 ```
 Substitua T pelo tipo de dado que deseja armazenar na fila.
 
 ### 2. Realize as operações desejadas na fila, como inserção e remoção:
-
-```
+```cpp
 fila.isEmpty();
 fila.enqueue(value);
 fila.dequeue();
@@ -36,7 +35,7 @@ Substitua value pelo valor a ser inserido.
 Utilize as funções isEmpty() para verificar se a fila está vazia, enqueue(value) para adicionar um elemento no final da fila, dequeue() para remover o elemento na frente da fila e peek() para acessar o elemento na frente da fila sem removê-lo.
 
 # Exemplo de utilização
-```
+```cpp
 #include <iostream>
 
 // Classe que implementa uma fila utilizando a estrutura de lista encadeada.
