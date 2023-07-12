@@ -81,6 +81,7 @@ Elemento removido: 4
 Elemento removido: 2
 Elemento removido: 1
 ```
+Neste exemplo, uma instância da classe Pilha é criada para armazenar valores do tipo int. São realizadas operações de inserção (push()) e remoção (pop()) na pilha, e o elemento do topo é acessado (peek()) e exibido na saída padrão. No final, a pilha é esvaziada e os elementos removidos são exibidos na ordem correta.
 
 # Observações
 - Esta implementação da pilha é genérica, o que significa que pode ser utilizada para armazenar valores de qualquer tipo de dado.
