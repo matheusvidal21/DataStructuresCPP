@@ -1,4 +1,7 @@
-# Estrutura de Dados
+<p align="center">
+<img src="Deque/docs/datastructurescpp.png" alt="Logo C++">
+</p>
+
 
 #### 👋 Bem-vindo ao meu repositório de Estrutura de Dados! Aqui você encontrará implementações de diversas estruturas de dados comumente usadas, escritas em C++.
 
